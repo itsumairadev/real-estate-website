@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Properties | Luxury Real Estate</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-building"></i>
+            <h1>Prime<span>Properties</span></h1>
+        </div>
+        
+        <div class="nav-links">
+            <a href="#home" class="active"><i class="fas fa-home"></i> Home</a>
+            <a href="#properties"><i class="fas fa-building"></i> Properties</a>
+            <a href="#agents"><i class="fas fa-user-tie"></i> Agents</a>
+            <a href="#about"><i class="fas fa-info-circle"></i> About</a>
+            <a href="#contact"><i class="fas fa-phone"></i> Contact</a>
+            <button class="btn-login"><i class="fas fa-user"></i> Login</button>
+            <button class="btn-add-property"><i class="fas fa-plus"></i> Add Property</button>
+        </div>
+
+        <div class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <a href="#home"><i class="fas fa-home"></i> Home</a>
+        <a href="#properties"><i class="fas fa-building"></i> Properties</a>
+        <a href="#agents"><i class="fas fa-user-tie"></i> Agents</a>
+        <a href="#about"><i class="fas fa-info-circle"></i> About</a>
+        <a href="#contact"><i class="fas fa-phone"></i> Contact</a>
+        <button class="btn-login"><i class="fas fa-user"></i> Login</button>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-overlay">
+            <div class="hero-content">
+                <h1 class="hero-title">Find Your <span class="highlight">Dream</span> Property</h1>
+                <p class="hero-subtitle">Discover the perfect home from our 10,000+ premium listings</p>
+                
+                <!-- Advanced Search Box -->
+                <div class="advanced-search">
+                    <div class="search-tabs">
+                        <button class="tab-btn active" data-tab="buy">Buy</button>
+                        <button class="tab-btn" data-tab="rent">Rent</button>
+                        <button class="tab-btn" data-tab="commercial">Commercial</button>
+                    </div>
+                    
+                    <div class="search-filters">
+                        <div class="filter-group">
+                            <input type="text" placeholder="Enter location, city or area...">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <select id="property-type">
+                                <option value="">Property Type</option>
+                                <option value="house">House</option>
+                                <option value="apartment">Apartment</option>
+                                <option value="villa">Villa</option>
+                                <option value="plot">Plot</option>
+                                <option value="commercial">Commercial</option>
+                                <option value="farmhouse">Farm House</option>
+                            </select>
+                            <i class="fas fa-home"></i>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <select id="price-range">
+                                <option value="">Price Range</option>
+                                <option value="0-50">Under 50L</option>
+                                <option value="50-100">50L - 1Cr</option>
+                                <option value="100-500">1Cr - 5Cr</option>
+                                <option value="500+">5Cr+</option>
+                            </select>
+                            <i class="fas fa-tag"></i>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <select id="bedrooms">
+                                <option value="">Bedrooms</option>
+                                <option value="1">1 Bed</option>
+                                <option value="2">2 Beds</option>
+                                <option value="3">3 Beds</option>
+                                <option value="4">4+ Beds</option>
+                            </select>
+                            <i class="fas fa-bed"></i>
+                        </div>
+                        
+                        <button class="btn-search-advanced">
+                            <i class="fas fa-search"></i> 
+                            <span>Search Properties</span>
+                            <i class="fas fa-sliders-h"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="quick-filters">
+                        <button class="quick-filter"><i class="fas fa-city"></i> Apartments</button>
+                        <button class="quick-filter"><i class="fas fa-home"></i> Houses</button>
+                        <button class="quick-filter"><i class="fas fa-tree"></i> Farmhouses</button>
+                        <button class="quick-filter"><i class="fas fa-building"></i> Commercial</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Stats Counter -->
+        <div class="stats-counter">
+            <div class="stat-item">
+                <h3 data-count="10000">0</h3>
+                <p>Properties</p>
+            </div>
+            <div class="stat-item">
+                <h3 data-count="500">0</h3>
+                <p>Happy Clients</p>
+            </div>
+            <div class="stat-item">
+                <h3 data-count="50">0</h3>
+                <p>Expert Agents</p>
+            </div>
+            <div class="stat-item">
+                <h3 data-count="15">0</h3>
+                <p>Years Experience</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Properties Section -->
+    <section class="featured-properties" id="properties">
+        <div class="section-header">
+            <h2>Featured Properties</h2>
+            <p>Discover our handpicked selection of premium properties</p>
+            <div class="view-all">
+                <a href="#all-properties">View All Properties <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+        
+        <!-- Property Filters -->
+        <div class="property-filters">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="house">Houses</button>
+                <button class="filter-btn" data-filter="apartment">Apartments</button>
+                <button class="filter-btn" data-filter="villa">Villas</button>
+                <button class="filter-btn" data-filter="commercial">Commercial</button>
+                <button class="filter-btn" data-filter="plot">Plots</button>
+            </div>
+            
+            <div class="sort-options">
+                <select id="sort-by">
+                    <option value="featured">Sort by: Featured</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="newest">Newest First</option>
+                    <option value="popular">Most Popular</option>
+                </select>
+            </div>
+        </div>
+        
+        <!-- Properties Grid -->
+        <div class="properties-grid">
+            <!-- Property 1 - Luxury Villa -->
+            <div class="property-card" data-type="villa" data-price="85000000">
+                <div class="property-image">
+                    <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Luxury Villa">
+                    <div class="property-badges">
+                        <span class="badge featured"><i class="fas fa-star"></i> Featured</span>
+                        <span class="badge sale">For Sale</span>
+                    </div>
+                    <div class="property-actions">
+                        <button class="action-btn"><i class="fas fa-heart"></i></button>
+                        <button class="action-btn"><i class="fas fa-share-alt"></i></button>
+                        <button class="action-btn"><i class="fas fa-camera"></i></button>
+                    </div>
+                    <div class="property-tour">
+                        <i class="fas fa-video"></i> Virtual Tour Available
+                    </div>
+                </div>
+                
+                <div class="property-content">
+                    <div class="property-header">
+                        <h3>Luxury Modern Villa</h3>
+                        <div class="property-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.5)</span>
+                        </div>
+                    </div>
+                    
+                    <p class="property-location">
+                        <i class="fas fa-map-marker-alt"></i> DHA Phase 8, Lahore
+                    </p>
+                    
+                    <div class="property-features">
+                        <div class="feature">
+                            <i class="fas fa-bed"></i>
+                            <span>5 Beds</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-bath"></i>
+                            <span>4 Baths</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-car"></i>
+                            <span>3 Garages</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-expand"></i>
+                            <span>5500 sqft</span>
+                        </div>
+                    </div>
+                    
+                    <div class="property-footer">
+                        <div class="property-price">
+                            <h4>PKR 8.5 Crore</h4>
+                            <p class="price-per-unit">PKR 15,455/sqft</p>
+                        </div>
+                        <button class="btn-view-details">
+                            View Details <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Property 2 - Modern Apartment -->
+            <div class="property-card" data-type="apartment" data-price="25000000">
+                <div class="property-image">
+                    <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Modern Apartment">
+                    <div class="property-badges">
+                        <span class="badge rent">For Rent</span>
+                        <span class="badge verified"><i class="fas fa-check-circle"></i> Verified</span>
+                    </div>
+                    <div class="property-actions">
+                        <button class="action-btn"><i class="fas fa-heart"></i></button>
+                        <button class="action-btn"><i class="fas fa-share-alt"></i></button>
+                    </div>
+                </div>
+                
+                <div class="property-content">
+                    <div class="property-header">
+                        <h3>Penthouse Apartment</h3>
+                        <div class="property-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(5.0)</span>
+                        </div>
+                    </div>
+                    
+                    <p class="property-location">
+                        <i class="fas fa-map-marker-alt"></i> Clifton, Karachi
+                    </p>
+                    
+                    <div class="property-features">
+                        <div class="feature">
+                            <i class="fas fa-bed"></i>
+                            <span>3 Beds</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-bath"></i>
+                            <span>3 Baths</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-swimming-pool"></i>
+                            <span>Pool</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-expand"></i>
+                            <span>2800 sqft</span>
+                        </div>
+                    </div>
+                    
+                    <div class="property-footer">
+                        <div class="property-price">
+                            <h4>PKR 250,000/month</h4>
+                            <p class="price-per-unit">PKR 89/sqft</p>
+                        </div>
+                        <button class="btn-view-details">
+                            View Details <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Property 3 - Commercial Building -->
+            <div class="property-card" data-type="commercial" data-price="120000000">
+                <div class="property-image">
+                    <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Commercial Building">
+                    <div class="property-badges">
+                        <span class="badge sale">For Sale</span>
+                        <span class="badge hot"><i class="fas fa-fire"></i> Hot Deal</span>
+                    </div>
+                    <div class="property-actions">
+                        <button class="action-btn"><i class="fas fa-heart"></i></button>
+                        <button class="action-btn"><i class="fas fa-share-alt"></i></button>
+                    </div>
+                </div>
+                
+                <div class="property-content">
+                    <div class="property-header">
+                        <h3>Commercial Plaza</h3>
+                        <div class="property-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(4.8)</span>
+                        </div>
+                    </div>
+                    
+                    <p class="property-location">
+                        <i class="fas fa-map-marker-alt"></i> Blue Area, Islamabad
+                    </p>
+                    
+                    <div class="property-features">
+                        <div class="feature">
+                            <i class="fas fa-store"></i>
+                            <span>12 Shops</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-building"></i>
+                            <span>4 Floors</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-car"></i>
+                            <span>Parking</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-expand"></i>
+                            <span>15,000 sqft</span>
+                        </div>
+                    </div>
+                    
+                    <div class="property-footer">
+                        <div class="property-price">
+                            <h4>PKR 12 Crore</h4>
+                            <p class="price-per-unit">PKR 8,000/sqft</p>
+                        </div>
+                        <button class="btn-view-details">
+                            View Details <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Property 4 - Farm House -->
+            <div class="property-card" data-type="plot" data-price="35000000">
+                <div class="property-image">
+                    <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Farm House">
+                    <div class="property-badges">
+                        <span class="badge sale">For Sale</span>
+                        <span class="badge discount"><i class="fas fa-percentage"></i> 10% Off</span>
+                    </div>
+                    <div class="property-actions">
+                        <button class="action-btn"><i class="fas fa-heart"></i></button>
+                        <button class="action-btn"><i class="fas fa-share-alt"></i></button>
+                    </div>
+                </div>
+                
+                <div class="property-content">
+                    <div class="property-header">
+                        <h3>Luxury Farm House</h3>
+                        <div class="property-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(4.0)</span>
+                        </div>
+                    </div>
+                    
+                    <p class="property-location">
+                        <i class="fas fa-map-marker-alt"></i> Bani Gala, Islamabad
+                    </p>
+                    
+                    <div class="property-features">
+                        <div class="feature">
+                            <i class="fas fa-bed"></i>
+                            <span>6 Beds</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-bath"></i>
+                            <span>5 Baths</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-tree"></i>
+                            <span>Garden</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-expand"></i>
+                            <span>2 Acre</span>
+                        </div>
+                    </div>
+                    
+                    <div class="property-footer">
+                        <div class="property-price">
+                            <h4>PKR 3.5 Crore</h4>
+                            <p class="old-price">PKR 3.9 Crore</p>
+                        </div>
+                        <button class="btn-view-details">
+                            View Details <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Agents Section -->
+    <section class="agents-section" id="agents">
+        <div class="section-header">
+            <h2>Our Expert Agents</h2>
+            <p>Connect with our certified real estate professionals</p>
+        </div>
+        
+        <div class="agents-grid">
+            <div class="agent-card">
+                <div class="agent-image">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Agent 1">
+                    <div class="agent-status online"></div>
+                </div>
+                <div class="agent-info">
+                    <h3>Ali Ahmed</h3>
+                    <p class="agent-title">Senior Property Consultant</p>
+                    <div class="agent-rating">
+                        <i class="fas fa-star"></i> 4.9 (127 Reviews)
+                    </div>
+                    <div class="agent-contact">
+                        <p><i class="fas fa-phone"></i> +92 300 1234567</p>
+                        <p><i class="fas fa-envelope"></i> ali@primeproperties.com</p>
+                    </div>
+                    <button class="btn-contact-agent">Contact Agent</button>
+                </div>
+            </div>
+            
+            <div class="agent-card">
+                <div class="agent-image">
+                    <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Agent 2">
+                    <div class="agent-status offline"></div>
+                </div>
+                <div class="agent-info">
+                    <h3>Sara Khan</h3>
+                    <p class="agent-title">Luxury Homes Specialist</p>
+                    <div class="agent-rating">
+                        <i class="fas fa-star"></i> 5.0 (89 Reviews)
+                    </div>
+                    <div class="agent-contact">
+                        <p><i class="fas fa-phone"></i> +92 321 7654321</p>
+                        <p><i class="fas fa-envelope"></i> sara@primeproperties.com</p>
+                    </div>
+                    <button class="btn-contact-agent">Contact Agent</button>
+                </div>
+            </div>
+            
+            <div class="agent-card">
+                <div class="agent-image">
+                    <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Agent 3">
+                    <div class="agent-status online"></div>
+                </div>
+                <div class="agent-info">
+                    <h3>Ahmed Raza</h3>
+                    <p class="agent-title">Commercial Property Expert</p>
+                    <div class="agent-rating">
+                        <i class="fas fa-star"></i> 4.8 (156 Reviews)
+                    </div>
+                    <div class="agent-contact">
+                        <p><i class="fas fa-phone"></i> +92 333 9876543</p>
+                        <p><i class="fas fa-envelope"></i> ahmed@primeproperties.com</p>
+                    </div>
+                    <button class="btn-contact-agent">Contact Agent</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>About Prime Properties</h2>
+                <p>With over 15 years of experience in the real estate industry, we have helped thousands of clients find their dream properties. Our commitment to excellence and customer satisfaction sets us apart.</p>
+                
+                <div class="about-features">
+                    <div class="feature-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>Verified Listings</h4>
+                        <p>All properties are thoroughly verified</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-handshake"></i>
+                        <h4>Trusted Service</h4>
+                        <p>15 years of trusted real estate service</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-headset"></i>
+                        <h4>24/7 Support</h4>
+                        <p>Round the clock customer support</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-trophy"></i>
+                        <h4>Award Winning</h4>
+                        <p>Multiple industry awards</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="About Us">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="section-header">
+            <h2>Contact Us</h2>
+            <p>Get in touch with our team for any inquiries</p>
+        </div>
+        
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="info-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h4>Visit Our Office</h4>
+                    <p>123 Main Street, DHA Phase 5<br>Karachi, Pakistan</p>
+                </div>
+                
+                <div class="info-card">
+                    <i class="fas fa-phone"></i>
+                    <h4>Call Us</h4>
+                    <p>+92 21 1234567<br>+92 300 1234567 (24/7)</p>
+                </div>
+                
+                <div class="info-card">
+                    <i class="fas fa-envelope"></i>
+                    <h4>Email Us</h4>
+                    <p>info@primeproperties.com<br>support@primeproperties.com</p>
+                </div>
+                
+                <div class="info-card">
+                    <i class="fas fa-clock"></i>
+                    <h4>Working Hours</h4>
+                    <p>Monday - Friday: 9AM - 6PM<br>Saturday: 10AM - 4PM</p>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <h3>Send Us a Message</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="tel" placeholder="Phone Number">
+                        <select required>
+                            <option value="">Inquiry Type</option>
+                            <option value="buy">Buy Property</option>
+                            <option value="rent">Rent Property</option>
+                            <option value="sell">Sell Property</option>
+                            <option value="general">General Inquiry</option>
+                        </select>
+                    </div>
+                    
+                    <textarea placeholder="Your Message" rows="5" required></textarea>
+                    
+                    <button type="submit" class="btn-submit-form">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="newsletter-content">
+            <h3>Subscribe to Our Newsletter</h3>
+            <p>Get the latest property listings and market updates</p>
+            <div class="newsletter-form">
+                <input type="email" placeholder="Enter your email address">
+                <button class="btn-subscribe">Subscribe</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="logo">
+                    <i class="fas fa-building"></i>
+                    <h2>Prime<span>Properties</span></h2>
+                </div>
+                <p>Your trusted partner in real estate since 2009. We connect buyers and sellers with their dream properties.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#properties">Properties</a></li>
+                    <li><a href="#agents">Agents</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Property Types</h4>
+                <ul>
+                    <li><a href="#">Apartments</a></li>
+                    <li><a href="#">Houses</a></li>
+                    <li><a href="#">Villas</a></li>
+                    <li><a href="#">Commercial</a></li>
+                    <li><a href="#">Plots</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i> Karachi, Pakistan</li>
+                    <li><i class="fas fa-phone"></i> +92 21 1234567</li>
+                    <li><i class="fas fa-envelope"></i> info@primeproperties.com</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 Prime Properties. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
